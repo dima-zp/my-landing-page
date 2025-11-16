@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link rel="stylesheet" href="style.css" />
+  <title>Свежие фрукты</title>
+</head>
+<body>
+
+   <header class="header">
+
+ <div class="site-note">сайт навчальний</div>
+
+ 
+    <div class="contacts">
+      
+      <nav>
+        
+        <a href="tel:+380674275269">(067) 427-52-69</a>
+        <a href="tel:+380972967678">(097) 296-76-78</a>
+        <a href="viber://add?number=380674275269">Viber</a>
+        <a href="whatsapp://send?phone=+380972967678">WhatsApp</a>
+        <a href="index.html">Українською</a> |
+        <a href="ru/index.html" class="btn">Російською</a>
+        <a href="../project 1/en/index.html">English</a>
+      </nav>
+    </div>
+    <div class="logo">
+      <img src="fruit-banner1.png" alt="центр" />
+    </div>
+
+
+
+   <div class="center-box">
+  <button class="btn-zapis" onclick="openModal('form2')">Перезвоните мне</button>
+</div>
+
+
+  </header>
+ <main class="main-content">
+    <section class="services fade-in">
+      <h2>Ваши свежие фрукти под заказ</h2>
+      <div class="service-grid">
+        <a href="p_esteticheskaya-kosmetologiya.html">
+          <img src="6.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_inyekcionnaya-kosmetologiya.html">
+          <img src="8.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_lazernyy-centr.html">
+          <img src="4.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_epil.html">
+          <img src="4.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_studiya-volos.html">
+          <img src="5.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_ukhod-za-rukami-i-nogami.html">
+          <img src="5.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+         <a href="p_esteticheskaya-kosmetologiya.html">
+          <img src="1.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_inyekcionnaya-kosmetologiya.html">
+          <img src="7.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_lazernyy-centr.html">
+          <img src="2.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_epil.html">
+          <img src="9.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_studiya-volos.html">
+          <img src="10.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_ukhod-za-rukami-i-nogami.html">
+          <img src="11.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+           <a href="p_epil.html">
+          <img src="12.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_studiya-volos.html">
+          <img src="13.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+            </div>
+           
+    </section>
+   <div class="center-box">
+  <button class="btn-zapis" onclick="openModal('form2')">Перезвоните мне</button>
+</div>
+ </main>
+
+<section  id="about" class="news-section">
+  <h2>Почему выбирают нас?</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>🍑 Натуральные продукты</h3>
+      <p>Только отборные фрукты без ГМО и химикатов.</p>
+    </div>
+    <div class="feature">
+      <h3>🚚 Быстрая доставка</h3>
+      <p>Привезём свежие плоды в течение 24 часов.</p>
+    </div>
+    <div class="feature">
+      <h3>🎟️ Выгодные акции</h3>
+      <p>Сезонные скидки и бонусы для постоянных клиентов.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="order">
+  <h2>Оставить заявку</h2>
+ <form action="https://formspree.io/f/mzzyzbwl" method="POST">
+    <label>Имя:<br><input type="text" name="name" required /></label><br><br>
+    <label>Email:<br><input type="email" name="email" required /></label><br><br>
+    <label>Ваш заказ:<br><textarea name="message" rows="5"></textarea></label><br><br>
+    <input type="hidden" name="_next" value="https://твой-сайт/thanks.html">
+    <button type="submit">Отправить</button>
+  </form>
+</section>
+  
+    <div class="phone-form-wrapper">
+  <form action="https://formspree.io/f/mzzyzbwl" method="POST">
+    <table>
+      <tr>
+        <td colspan="2"><strong>Введите свой номер телефона и Вам терезвонят:</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="tel" name="phone" placeholder="+38 (0XX) XXX-XX-XX" autocomplete="tel" required>
+        </td>
+        <td>
+          <button type="submit">Надіслати</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<div id="booking-form" style="display: none;">
+  <!-- содержимое формы -->
+  <form>
+    <label>Ваше имя:</label>
+    <input type="text" name="name">
+    <label>Телефон:</label>
+    <input type="tel" name="phone">
+    <button type="submit">Отправить</button>
+  </form>
+</div>
+
+   <div class="phone-form-wrapper">
+  <form action="https://formspree.io/f/mzzyzbwl" method="POST">
+    <table>
+      <tr>
+        <td colspan="2"><strong>Введіть свій номер телефону ми Вам зателефонуємо:</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="tel" name="phone" placeholder="+38 (0XX) XXX-XX-XX" autocomplete="tel" required>
+        </td>
+        <td>
+          <button type="submit">Надіслати</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+
+ <!-- <button class="btn-zapis" onclick="openModal('form2')">Перезвоните мне</button> -->
+
+  <!-- Одна модалка -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+
+      <!-- Форма 1 -->
+      <form id="form1" class="hidden" action="https://formspree.io/f/mzzyzbwl" method="POST">
+        <h2>Заявка</h2>
+        <input type="text" name="name" placeholder="Ваше ім’я" required><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <textarea name="message" placeholder="Ваш заказ"></textarea><br><br>
+        <button type="submit">Отправить</button>
+      </form>
+
+      <!-- Форма 2 -->
+      <form id="form2" class="hidden" action="https://formspree.io/f/mzzyzbwl" method="POST">
+        <h2>Перезвоните мне</h2>
+        <input type="text" name="name" placeholder="Ваше ім’я" required><br><br>
+        <input type="tel" name="phone" placeholder="Телефон" required><br><br>
+        <button type="submit">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openModal(formId) {
+      document.getElementById("myModal").style.display = "block";
+      // скрываем все формы
+      document.querySelectorAll("#myModal form").forEach(f => f.classList.add("hidden"));
+      // показываем нужную
+      document.getElementById(formId).classList.remove("hidden");
+    }
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById("myModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="door">
+   <h2>2025 Свежие фрукты. Все права защищены.</h2>
+  &copy; 2025 Свежие фрукты. Все права защищены.
+</footer>
+
+<script>
+function openCallbackForm() {
+  const modal = document.getElementById('btn-zapis');
+  // если модалка скрыта — показать, если показана — скрыть
+  if (modal.style.display === "block") {
+    modal.style.display = "none";
+  } else {
+    modal.style.display = "block";
+  }
+}
+
+// закрытие при клике вне модалки
+window.onclick = function(event) {
+  const modal = document.getElementById('btn-zapis');
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+  <script>
+    function openCallbackForm() {
+      document.getElementById("openCallbackForm").style.display = "block";
+    }
+    function closeCallbackForm() {
+      document.getElementById("openCallbackForm").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
