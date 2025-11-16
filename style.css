@@ -1,4 +1,31 @@
-  body {
+
+.site-header {
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+  position: sticky; /* липкий */
+  top: 0;
+  z-index: 1000;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+.nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+.nav a:hover { color: #ff6a00; }
+
+
+
+body {
       margin: 10px;
       font-family: 'Segoe UI', sans-serif;
       /* background: url('fruit-banner.png') center/cover no-repeat; */
@@ -57,16 +84,6 @@
 }
 
 
-
-
-.site-note {
-  font-size: 14px;
-  color: #999;
-  text-align: center;
-  padding: 8px 0;
-  background-color: #f0f0f0;
-  font-style: italic;
-}
 
    .team {
   margin: 20px auto;
@@ -171,24 +188,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     .cta-button {
       background: #ffcc00;
       color: #333;
@@ -279,9 +278,6 @@ section {
 }
 
 
-
-
-
 .feature {
   flex: 1;
   background: #eef;
@@ -296,10 +292,6 @@ section {
       background: #eee;
       margin-top: 40px;
     }
-
-
-
-
 
 
   .service-grid {
@@ -392,8 +384,6 @@ section {
   margin: 20px;
 }
 
-
-
 .modal {
   display: none; /* скрыто по умолчанию */
   position: fixed;
@@ -421,15 +411,6 @@ section {
   font-size: 24px;
   cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
 
 .phone-form-wrapper {
     max-width: 500px;
@@ -488,4 +469,139 @@ section {
       margin-top: 10px;
     }
   }
-    
+    .form-wrapper {
+  max-width: 500px;
+  margin: 40px auto;             /* центрируем форму */
+  padding: 20px;
+  background: #f9f9f9;           /* светлый фон */
+  border-radius: 10px;           /* скруглённые углы */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* лёгкая тень */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-wrapper h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-wrapper label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-wrapper input[type="text"],
+.form-wrapper input[type="email"],
+.form-wrapper input[type="tel"],
+.form-wrapper textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.form-wrapper input:focus,
+.form-wrapper textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 12px;
+  background: #ff6a00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-wrapper button:hover {
+  background: #e65c00;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+section {
+  margin: 30px auto;   /* меньше отступы на мобилке */
+  padding: 20px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+.service-grid img {
+  width: 100%;
+  height: auto;       /* убираем фиксированную высоту */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;   /* меню под логотипом */
+    gap: 10px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 22px;          /* уменьшить заголовок */
+  }
+
+  .btn-zapis {
+    width: 100%;              /* кнопка на всю ширину */
+    max-width: 300px;
+  }
+
+  section {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+  border-radius: 10px;
+}
+@media (max-width: 768px) {
+  section {
+    margin: 20px auto;
+    padding: 15px;
+  }
+}
+h1 { font-size: clamp(20px, 5vw, 40px); }
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .nav {
+    justify-content: center;
+  }
+  .hero h1 {
+    font-size: 22px;
+  }
+  .btn-zapis {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
