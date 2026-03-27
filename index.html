@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <link rel="stylesheet" href="style.css" />
+  <title>Свежие фрукты</title>
+</head>
+
+
+<style>
+
+    body {
+      margin: 10px;
+      font-family: 'Segoe UI', sans-serif;
+      /* background: url('fruit-banner.png') center/cover no-repeat; */
+      color: #333;
+    }
+    
+    
+    header {
+      position: relative;
+      /* background: url('fruit-banner1.jpg') center/cover no-repeat; */
+      color: white;
+      padding: 0px 10px;
+      text-align: center;
+    }
+
+.services h2 {
+  font-size: 32px;
+  color: #80134b;
+  margin-bottom: 30px;
+  text-align: center
+}
+
+
+    .contacts nav {
+  margin-top: 10px;
+}
+.contacts nav a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #333;
+}
+.contacts nav a:hover {
+  text-decoration: underline;
+}
+
+  .center-box {
+  display: flex;
+  justify-content: center; /* по горизонтали */
+  align-items: center;     /* по вертикали */
+  height: 50px;           /* задаём высоту контейнера */
+  border: 1px dashed #ccc; /* для наглядности */
+}
+
+.btn-zapis {
+  background-color: #ff6a00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-zapis:hover {
+  background-color: #e65c00;
+}
+
+
+
+
+.site-note {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  padding: 8px 0;
+  background-color: #f0f0f0;
+  font-style: italic;
+}
+
+   .team {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.team h2 {
+  font-size: 32px;
+  color: #80134b;
+  margin-bottom: 30px;
+}
+
+
+
+
+  .cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cell img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .cell a {
+    margin-top: 10px;
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+  }
+
+  .cell a:hover {
+    text-decoration: underline;
+  }
+
+.logo {
+    margin: 20px;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+
+.team-member h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #b42870;
+}
+
+.team-member p {
+  margin: 0;
+  font-size: 16px;
+  color: #444;
+}
+
+
+   
+    
+
+
+
+
+.center-box {
+  display: flex;
+  justify-content: center;     /* по горизонтали */
+  align-items: center;         /* по вертикали */
+  min-height: 80px;            /* адаптивная высота */
+  padding: 10px 0;             /* отступы сверху/снизу */
+  box-sizing: border-box;
+}
+
+.btn-zapis {
+  display: inline-block;
+  background-color: #ff6a00;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-zapis:hover {
+  background-color: #e65c00;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .cta-button {
+      background: #ffcc00;
+      color: #333;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    
+section {
+  margin: 60px auto;       /* отступ сверху и снизу */
+  padding: 40px 20px;      /* внутренние отступы */
+  max-width: 1200px;       /* ограничение ширины */
+  border-radius: 10px;     /* скругление углов */
+}
+
+
+
+
+#order input,
+#order textarea,
+#order {
+  display: block;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#order h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Форма */
+#order form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Метки */
+#order label {
+  font-weight: 500;
+  color: #444;
+}
+
+/* Поля ввода */
+#order input[type="text"],
+#order input[type="email"],
+#order textarea,
+#order input[type="datetime-local"],
+#order input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+#order input:focus,
+#order textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+/* Кнопка */
+#order button {
+  padding: 12px;
+  background: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#order button:hover {
+  background: #005fa3;
+}
+
+
+
+
+
+.feature {
+  flex: 1;
+  background: #eef;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: #eee;
+      margin-top: 40px;
+    }
+
+
+
+
+
+
+  .service-grid {
+  display: grid;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+.service-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.service-grid a:hover {
+  transform: scale(1.05);
+  color: #b42870;
+}
+
+.service-grid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+.service-grid p {
+  margin-top: auto;    /* текст всегда прижат к низу карточки */
+  font-weight: 500;
+}
+
+.service-grid img {
+  width: 100%;
+  height: 200px;       /* фиксированная высота */
+  object-fit: cover;   /* обрезает фото, сохраняя пропорции */
+  border-radius: 6px;
+}
+
+
+@media (max-width: 768px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.door {
+  background: #d659cc;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+#order {
+     text-align: center; 
+}
+   
+
+section {
+  margin: 60px auto;       /* отступ сверху и снизу */
+  padding: 40px 20px;      /* внутренние отступы */
+  max-width: 1200px;       /* ограничение ширины */
+  border-radius: 10px;     /* скругление углов */
+}
+
+
+
+.news-section {
+  margin: 60px auto;
+  padding: 20px;
+  text-align: center;
+  max-width: 1240px;
+  box-sizing: border-box;
+}
+
+
+  .feature {
+  display: block;
+  width: 100%;
+  text-align: center;
+  
+  gap: 40px;
+ padding: 20px;
+  margin: 20px;
+}
+
+
+
+.modal {
+  display: none; /* скрыто по умолчанию */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5); /* затемнение фона */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.phone-form-wrapper {
+    max-width: 500px;
+    margin: 30px auto;
+    font-family: 'Didact Gothic', sans-serif;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.05);
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .phone-form-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .phone-form-wrapper td {
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  .phone-form-wrapper input[type="tel"] {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: #fff;
+  }
+
+  .phone-form-wrapper button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .phone-form-wrapper button:hover {
+    background-color: #45a049;
+  }
+
+  @media (max-width: 480px) {
+    .phone-form-wrapper td {
+      display: block;
+      width: 100%;
+    }
+
+    .phone-form-wrapper button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+    .form-wrapper {
+  max-width: 500px;
+  margin: 40px auto;             /* центрируем форму */
+  padding: 20px;
+  background: #f9f9f9;           /* светлый фон */
+  border-radius: 10px;           /* скруглённые углы */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* лёгкая тень */
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-wrapper h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.form-wrapper label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-wrapper input[type="text"],
+.form-wrapper input[type="email"],
+.form-wrapper input[type="tel"],
+.form-wrapper textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.form-wrapper input:focus,
+.form-wrapper textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.form-wrapper button {
+  width: 100%;
+  padding: 12px;
+  background: #ff6a00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-wrapper button:hover {
+  background: #e65c00;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+section {
+  margin: 30px auto;   /* меньше отступы на мобилке */
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;   /* меню под логотипом */
+    gap: 10px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 22px;          /* уменьшить заголовок */
+  }
+
+  .btn-zapis {
+    width: 100%;              /* кнопка на всю ширину */
+    max-width: 300px;
+  }
+
+  section {
+    margin: 20px auto;
+    padding: 20px 10px;
+  }
+}
+h1 { font-size: clamp(20px, 5vw, 40px); }
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+   <header class="header">
+
+ <div class="site-note">сайт навчальний</div>
+
+ 
+    <div class="contacts">
+      
+      <nav>
+        
+        <a href="tel:+380674275269">(067) 427-52-69</a>
+        <a href="tel:+380972967678">(097) 296-76-78</a>
+        <a href="viber://add?number=380674275269">Viber</a>
+        <a href="whatsapp://send?phone=+380972967678">WhatsApp</a>
+        <a href="index.html">Українською</a> |
+        <a href="index.html" class="btn">Російською</a>
+        <a href="index.html">English</a>
+      </nav>
+    </div>
+    
+    <div class="logo">
+      <img src="fruit-banner1.png" alt="центр" />
+    </div>
+
+
+
+   <div class="center-box">
+  <button class="btn-zapis" onclick="openModal('form2')">Заказать свежие фрукты</button>
+</div>
+
+
+  </header>
+ <main class="main-content">
+    <section class="services fade-in">
+      <h2>Ваши свежие фрукти под заказ</h2>
+      <div class="service-grid">
+        <a href="p_esteticheskaya-kosmetologiya.html">
+          <img src="6.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_inyekcionnaya-kosmetologiya.html">
+          <img src="8.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_lazernyy-centr.html">
+          <img src="4.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_epil.html">
+          <img src="4.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_studiya-volos.html">
+          <img src="5.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_ukhod-za-rukami-i-nogami.html">
+          <img src="5.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+         <a href="p_esteticheskaya-kosmetologiya.html">
+          <img src="1.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_inyekcionnaya-kosmetologiya.html">
+          <img src="7.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_lazernyy-centr.html">
+          <img src="2.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_epil.html">
+          <img src="9.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_studiya-volos.html">
+          <img src="10.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_ukhod-za-rukami-i-nogami.html">
+          <img src="11.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+           <a href="p_epil.html">
+          <img src="12.jpg" alt=" карт" />
+          <p>свежие фрукти</p>
+        </a>
+        <a href="p_studiya-volos.html">
+          <img src="13.jpg" alt="карт" />
+          <p>свежие фрукти</p>
+        </a>
+            </div>
+           
+    </section>
+   <div class="center-box">
+  <button class="btn-zapis" onclick="openModal('form2')">Заказать свежие фрукты </button>
+</div>
+ </main>
+
+<section  id="about" class="news-section">
+  <h2>Почему выбирают нас?</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>🍑 Натуральные продукты</h3>
+      <p>Только отборные фрукты без ГМО и химикатов.</p>
+    </div>
+    <div class="feature">
+      <h3>🚚 Быстрая доставка</h3>
+      <p>Привезём свежие плоды в течение 24 часов.</p>
+    </div>
+    <div class="feature">
+      <h3>🎟️ Выгодные акции</h3>
+      <p>Сезонные скидки и бонусы для постоянных клиентов.</p>
+    </div>
+  </div>
+</section>
+
+
+<section id="order">
+  <h2>Оставить заявку</h2>
+ <form action="https://formspree.io/f/mzzyzbwl" method="POST">
+    <label>Имя:<br><input type="text" name="name" required /></label><br><br>
+    <label>Email:<br><input type="email" name="email" required /></label><br><br>
+    <label>Ваш заказ:<br><textarea name="message" rows="5"></textarea></label><br><br>
+    <input type="hidden" name="_next" value="https://твой-сайт/thanks.html">
+    <button type="submit">Отправить</button>
+  </form>
+</section>
+  
+    <div class="phone-form-wrapper">
+  <form action="https://formspree.io/f/mzzyzbwl" method="POST">
+    <table>
+      <tr>
+        <td colspan="2"><strong>Введите свой номер телефона и Вам терезвонят:</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="tel" name="phone" placeholder="+38 (0XX) XXX-XX-XX" autocomplete="tel" required>
+        </td>
+        <td>
+          <button type="submit">Надіслати</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+<div id="booking-form" style="display: none;">
+  <!-- содержимое формы -->
+  <form>
+    <label>Ваше имя:</label>
+    <input type="text" name="name">
+    <label>Телефон:</label>
+    <input type="tel" name="phone">
+    <button type="submit">Отправить</button>
+  </form>
+</div>
+
+   <div class="phone-form-wrapper">
+  <form action="https://formspree.io/f/mzzyzbwl" method="POST">
+    <table>
+      <tr>
+        <td colspan="2"><strong>Введіть свій номер телефону ми Вам зателефонуємо:</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <input type="tel" name="phone" placeholder="+38 (0XX) XXX-XX-XX" autocomplete="tel" required>
+        </td>
+        <td>
+          <button type="submit">Надіслати</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+
+
+ <!-- <button class="btn-zapis" onclick="openModal('form2')">Перезвоните мне</button> -->
+
+  <!-- Одна модалка -->
+  <div id="myModal" class="modal">
+    <div class="phone-form-wrapper">
+      <span class="close" onclick="closeModal()">×</span>
+
+      <!-- Форма 1 -->
+      <form id="form1" class="hidden" action="https://formspree.io/f/mzzyzbwl" method="POST">
+        <h2>Заявка</h2>
+        <input type="text" name="name" placeholder="Ваше ім’я" required><br><br>
+        <input type="email" name="email" placeholder="Email" required><br><br>
+        <textarea name="message" placeholder="Ваш заказ"></textarea><br><br>
+        <button type="submit">Отправить</button>
+      </form>
+
+      <!-- Форма 2 -->
+      <form id="form2" class="hidden" action="https://formspree.io/f/mzzyzbwl" method="POST">
+        <h2>Оставить заявку  по телефону</h2>
+        <input type="text" name="name" placeholder="Ваше ім’я" required><br><br>
+        <input type="tel" name="phone" placeholder="Телефон" required><br><br>
+        <button type="submit">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function openModal(formId) {
+      document.getElementById("myModal").style.display = "block";
+      // скрываем все формы
+      document.querySelectorAll("#myModal form").forEach(f => f.classList.add("hidden"));
+      // показываем нужную
+      document.getElementById(formId).classList.remove("hidden");
+    }
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById("myModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="door">
+   <h2>2025 Свежие фрукты. Все права защищены.</h2>
+  &copy; 2025 Свежие фрукты. Все права защищены.
+</footer>
+
+<script>
+function openCallbackForm() {
+  const modal = document.getElementById('btn-zapis');
+  // если модалка скрыта — показать, если показана — скрыть
+  if (modal.style.display === "block") {
+    modal.style.display = "none";
+  } else {
+    modal.style.display = "block";
+  }
+}
+
+// закрытие при клике вне модалки
+window.onclick = function(event) {
+  const modal = document.getElementById('btn-zapis');
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+  <script>
+    function openCallbackForm() {
+      document.getElementById("openCallbackForm").style.display = "block";
+    }
+    function closeCallbackForm() {
+      document.getElementById("openCallbackForm").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
