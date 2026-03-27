@@ -811,30 +811,18 @@ h1 { font-size: clamp(20px, 5vw, 40px); }
     </div>
   </div>
 
-  <script>
-    function openModal(formId) {
-      document.getElementById("myModal").style.display = "block";
-      // скрываем все формы
-      document.querySelectorAll("#myModal form").forEach(f => f.classList.add("hidden"));
-      // показываем нужную
-      document.getElementById(formId).classList.remove("hidden");
-    }
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-    window.onclick = function(event) {
-      const modal = document.getElementById("myModal");
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
 
 
 
 
 
 
+
+<button id="goTopBtn" class="go-top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24">
+    <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+  </svg>
+</button>
 
 
 
@@ -849,6 +837,43 @@ h1 { font-size: clamp(20px, 5vw, 40px); }
   &copy; 2025 Свежие фрукты. Все права защищены.
 </footer>
 
+
+<script>
+	const goTopBtn = document.getElementById("goTopBtn");
+
+// показываем кнопку при прокрутке
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    goTopBtn.style.display = "block";
+  } else {
+    goTopBtn.style.display = "none";
+  }
+});
+
+// плавный скролл вверх
+goTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 <script>
 function openCallbackForm() {
   const modal = document.getElementById('btn-zapis');
@@ -870,6 +895,24 @@ window.onclick = function(event) {
 </script>
 
 
+  <script>
+    function openModal(formId) {
+      document.getElementById("myModal").style.display = "block";
+      // скрываем все формы
+      document.querySelectorAll("#myModal form").forEach(f => f.classList.add("hidden"));
+      // показываем нужную
+      document.getElementById(formId).classList.remove("hidden");
+    }
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+    window.onclick = function(event) {
+      const modal = document.getElementById("myModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 
 
